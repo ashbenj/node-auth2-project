@@ -30,12 +30,11 @@ router.post('/login', (req, res) => {
 				});
 			} else {
 				res.status(401).json({ message: 'Invalid Credentials' });
-            }
-        })
-            .catch(error => {
-                res.status(500).json(error)
-            })
-        });
-        
-        module.exports = router;
+			}
+		})
+		.catch((error) => {
+			res.status(500).json(error);
+		});
 });
+
+module.exports = router;
